@@ -46,7 +46,7 @@ class MyApp extends StatelessWidget {
                           children: [
                             Icon(
                               Icons.favorite,
-                              color: Colors.pink,
+                              color: Colors.white,
                               size: 24.0,
                               semanticLabel:
                                   'Text to announce in accessibility modes',
@@ -67,7 +67,7 @@ class MyApp extends StatelessWidget {
                             ),
                             Icon(
                               Icons.close,
-                              color: Colors.red,
+                              color: Colors.black,
                               size: 24.0,
                               semanticLabel:
                                   'Text to announce in accessibility modes',
@@ -95,7 +95,7 @@ class MyApp extends StatelessWidget {
                           children: [
                             Icon(
                               Icons.favorite,
-                              color: Colors.pink,
+                              color: Colors.white,
                               size: 24.0,
                               semanticLabel:
                                   'Text to announce in accessibility modes',
@@ -116,7 +116,7 @@ class MyApp extends StatelessWidget {
                             ),
                             Icon(
                               Icons.close,
-                              color: Colors.red,
+                              color: Colors.black,
                               size: 24.0,
                               semanticLabel:
                                   'Text to announce in accessibility modes',
@@ -155,7 +155,7 @@ class MyApp extends StatelessWidget {
                               children: [
                                 Icon(
                                   Icons.favorite,
-                                  color: Colors.pink,
+                                  color: Colors.white,
                                   size: 24.0,
                                   semanticLabel:
                                       'Text to announce in accessibility modes',
@@ -176,7 +176,7 @@ class MyApp extends StatelessWidget {
                                 ),
                                 Icon(
                                   Icons.close,
-                                  color: Colors.red,
+                                  color: Colors.black,
                                   size: 24.0,
                                   semanticLabel:
                                       'Text to announce in accessibility modes',
@@ -228,7 +228,7 @@ class MyApp extends StatelessWidget {
                               children: [
                                 Icon(
                                   Icons.favorite,
-                                  color: Colors.pink,
+                                  color: Colors.white,
                                   size: 24.0,
                                   semanticLabel:
                                       'Text to announce in accessibility modes',
@@ -249,7 +249,7 @@ class MyApp extends StatelessWidget {
                                 ),
                                 Icon(
                                   Icons.close,
-                                  color: Colors.red,
+                                  color: Colors.black,
                                   size: 24.0,
                                   semanticLabel:
                                       'Text to announce in accessibility modes',
