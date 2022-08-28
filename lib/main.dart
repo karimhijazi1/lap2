@@ -1,11 +1,24 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class MyApp extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return _MyAppState();
+  }
+}
+
+Color first = Colors.white;
+Image pic1 = Image.network(
+    "https://th.bing.com/th/id/OIP.ARqjhOW9XJpTNdk5U2zdwwHaFj?pid=ImgDet&rs=1");
+Image pic2 = Image.network(
+    "https://th.bing.com/th/id/R.3db1b90212bd9c2cb3f68f647197a3b8?rik=%2fJCx95tVq8nFCA&pid=ImgRaw&r=0");
+
+class _MyAppState extends State<MyApp> {
+  //const Home({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
@@ -14,9 +27,10 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(),
         body: Container(
+          //   color: first,
+
           decoration: BoxDecoration(
-            gradient: LinearGradient(
-                colors: [Colors.white, Colors.red, Colors.blueAccent]),
+            color: first,
           ),
           child: ListView(
             children: [
@@ -76,6 +90,24 @@ class MyApp extends StatelessWidget {
                         ),
                       ),
                     ],
+                  ),
+                ),
+
+                Container(
+                  child: ElevatedButton(
+                    onPressed: () {
+                      setState(() {
+                        pic1 = Image.network(
+                            "https://th.bing.com/th/id/R.3db1b90212bd9c2cb3f68f647197a3b8?rik=%2fJCx95tVq8nFCA&pid=ImgRaw&r=0");
+                      });
+                    },
+                    child: Icon(Icons.pause, color: Colors.grey),
+                    style: ElevatedButton.styleFrom(
+                      shape: CircleBorder(),
+                      padding: EdgeInsets.all(20),
+                      primary: Colors.green, // <-- Button color
+                      onPrimary: Colors.red, // <-- Splash color
+                    ),
                   ),
                 ),
                 //icon
@@ -271,7 +303,11 @@ class MyApp extends StatelessWidget {
                     children: [
                       Container(
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            setState(() {
+                              first = Colors.blue;
+                            });
+                          },
                           child: Icon(Icons.pause, color: Colors.blue),
                           style: ElevatedButton.styleFrom(
                             shape: CircleBorder(),
@@ -283,7 +319,11 @@ class MyApp extends StatelessWidget {
                       ),
                       Container(
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            setState(() {
+                              first = Colors.red;
+                            });
+                          },
                           child: Icon(Icons.pause, color: Colors.red),
                           style: ElevatedButton.styleFrom(
                             shape: CircleBorder(),
@@ -295,7 +335,11 @@ class MyApp extends StatelessWidget {
                       ),
                       Container(
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            setState(() {
+                              first = Colors.green;
+                            });
+                          },
                           child: Icon(Icons.pause, color: Colors.green),
                           style: ElevatedButton.styleFrom(
                             shape: CircleBorder(),
@@ -307,7 +351,11 @@ class MyApp extends StatelessWidget {
                       ),
                       Container(
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            setState(() {
+                              first = Colors.amber;
+                            });
+                          },
                           child: Icon(Icons.pause, color: Colors.amber),
                           style: ElevatedButton.styleFrom(
                             shape: CircleBorder(),
