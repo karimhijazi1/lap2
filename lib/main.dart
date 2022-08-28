@@ -12,10 +12,8 @@ class MyApp extends StatefulWidget {
 }
 
 Color first = Colors.white;
-Image pic1 = Image.network(
-    "https://th.bing.com/th/id/OIP.ARqjhOW9XJpTNdk5U2zdwwHaFj?pid=ImgDet&rs=1");
-Image pic2 = Image.network(
-    "https://th.bing.com/th/id/R.3db1b90212bd9c2cb3f68f647197a3b8?rik=%2fJCx95tVq8nFCA&pid=ImgRaw&r=0");
+String pic1 = 'images/petra.jpg';
+String pic2 = "images/Daedsea.jpg";
 
 class _MyAppState extends State<MyApp> {
   //const Home({Key? key}) : super(key: key);
@@ -49,10 +47,7 @@ class _MyAppState extends State<MyApp> {
                         width: 200,
                         height: 200,
                         decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: NetworkImage(
-                                "https://1.bp.blogspot.com/-BFasx9RczJU/XjHVjctIY-I/AAAAAAAAaOg/iLK2VySoZAghllEGght8oSIFh9fsatA2ACNcBGAsYHQ/s1600/%25D9%2585%25D8%25B9%25D9%2584%25D9%2588%25D9%2585%25D8%25A7%25D8%25AA%2B%25D8%25B9%25D9%2586%2B%25D8%25AA%25D8%25A7%25D8%25B1%25D9%258A%25D8%25AE%2B%25D9%2585%25D8%25AF%25D9%258A%25D9%2586%25D8%25A9%2B%25D8%25A7%25D9%2584%25D8%25A8%25D8%25AA%25D8%25B1%25D8%25A7%25D8%25A1%2B%25D9%2581%25D9%258A%2B%25D8%25A7%25D9%2584%25D8%25A7%25D8%25B1%25D8%25AF%25D9%2586%2B%25D9%2588%25D8%25A7%25D9%2584%25D8%25B3%25D9%258A%25D8%25A7%25D8%25AD%25D8%25A9%2B%25D9%2581%25D9%258A%25D9%2587%25D8%25A7%2B%25281%2529.jpg"),
-                          ),
+                          image: DecorationImage(image: AssetImage(pic1)),
                         ),
                       ),
                       Container(
@@ -97,8 +92,7 @@ class _MyAppState extends State<MyApp> {
                   child: ElevatedButton(
                     onPressed: () {
                       setState(() {
-                        pic1 = Image.network(
-                            "https://th.bing.com/th/id/R.3db1b90212bd9c2cb3f68f647197a3b8?rik=%2fJCx95tVq8nFCA&pid=ImgRaw&r=0");
+                        pic1 = "images/download.jpg";
                       });
                     },
                     child: Icon(Icons.pause, color: Colors.grey),
@@ -158,16 +152,28 @@ class _MyAppState extends State<MyApp> {
                       ),
                       //image
                       Container(
+                        child: Image(image: AssetImage(pic2)),
                         width: 200,
                         height: 200,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: NetworkImage(
-                                "https://th.bing.com/th/id/R.f002b8a0fe2cf4c29cdb4618695eefe2?rik=j64FBIvat74grQ&pid=ImgRaw&r=0"),
-                          ),
-                        ),
                       ),
                     ],
+                  ),
+                ),
+
+                Container(
+                  child: ElevatedButton(
+                    onPressed: () {
+                      setState(() {
+                        pic2 = "images/petra.jpg";
+                      });
+                    },
+                    child: Icon(Icons.pause, color: Colors.grey),
+                    style: ElevatedButton.styleFrom(
+                      shape: CircleBorder(),
+                      padding: EdgeInsets.all(20),
+                      primary: Colors.green, // <-- Button color
+                      onPrimary: Colors.red, // <-- Splash color
+                    ),
                   ),
                 ),
                 Container(
